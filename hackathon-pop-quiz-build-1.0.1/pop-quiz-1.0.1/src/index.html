@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your JavaScript Playground</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    
+    <div class="navbar">
+      <ul>
+        <li><a href="default.asp">Home</a></li>
+        <li><a href="contact.asp">Contact</a></li>
+        <li><a href="about.asp">About</a></li>
+      </ul>
+    </div>
+    <h2>Quiz Board</h2>
+    <p>
+      <button class="button" data-modal="modalTwo">Start the Quiz</button>
+    </p>
+    <div id="modalTwo" class="modal">
+      <div class="modal-content">
+        <div class="contact-form">
+          <span class="close">&times;</span>
+          <form action="/">
+            <h2>Enter Details to Start Quiz</h2>
+            <div>
+              <input class="fname" type="text" name="name" placeholder="Full name" />
+              <input type="text" name="name" placeholder="Email" />
+              <br>
+              <label for="quiz">Choose an option:</label>
+
+<select name="quiz" id="quiz">
+  <br><br>
+  <option value="general knowledge">General Knowledge</option>
+  <option value="sports">Sports</option>
+  <option value="music">Music</option>
+  <option value="films">Films</option>
+  <option value="history">History</option>
+</select>
+            </div>
+           
+            <button type="submit" href="/">Start Quiz</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>
