@@ -3,38 +3,79 @@
 * {
   font-family: 'Open Sans', sans-serif;
 }
-
-html,
-body {
-  margin: 0px;
-  padding: 0px;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
-#main {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+li {
+  float: left;
 }
 
-p {
-  margin: 4px;
-}
-
-code {
-  font-family: monospace;
-  font-size: 1rem;
-  background-color: rgb(219, 219, 219);
-  padding: 2px;
-}
-
-#api-status {
-  margin-top: 100px;
-  font-family: monospace;
+li a {
+  display: block;
+  color: white;
   text-align: center;
-  font-size: 1rem;
-  background-color: rgb(219, 219, 219);
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+.active {
+  background-color: #04AA6D;
+}
+.social-card {
+  position: relative;
+  width: 600px;
+  height: 180px;
+  border: 1px solid;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  margin-top: 30px;
+  background-color: #fff;
   padding: 10px;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.post-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-image: url('../img/joe-m.jpg');
+  background-size: cover;
+  border-radius: 25px;
+}
+
+.post-title {
+  position: absolute;
+  top: 15px;
+  left: 90px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.post-user {
+  position: absolute;
+  top: 50px;
+  left: 90px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(83, 24, 146);
+}
+
+.post-content {
+  position: relative;
+  top: 80px;
+  font-size: 16px;
 }
