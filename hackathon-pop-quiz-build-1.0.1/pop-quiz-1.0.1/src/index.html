@@ -3,49 +3,143 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your JavaScript Playground</title>
+    <title>Quiz Application</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
   </head>
   <body>
     
     <div class="navbar">
       <ul>
-        <li><a href="default.asp">Home</a></li>
-        <li><a href="contact.asp">Contact</a></li>
-        <li><a href="about.asp">About</a></li>
+        <li ><a class="nav" href="/">Home</a></li>
+        <li ><a class="nav" href="contact.html">Contact</a></li>
+        <li ><a class="nav" href="about.html">About</a></li>
       </ul>
     </div>
-    <h2>Quiz Board</h2>
-    <p>
-      <button class="button" data-modal="modalTwo">Start the Quiz</button>
-    </p>
+<!-- <div class="ratingmain">
+    <span class="heading">User Rating</span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <p>4.1 average based on 254 reviews.</p>
+    <hr style="border:3px solid #f1f1f1">
+    
+    <div class="row">
+      <div class="side">
+        <div>5 star</div>
+      </div>
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-5"></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>150</div>
+      </div>
+      <div class="side">
+        <div>4 star</div>
+      </div>
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-4"></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>63</div>
+      </div>
+      <div class="side">
+        <div>3 star</div>
+      </div>
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-3"></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>15</div>
+      </div>
+      <div class="side">
+        <div>2 star</div>
+      </div>
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-2"></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>6</div>
+      </div>
+      <div class="side">
+        <div>1 star</div>
+      </div>
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-1"></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>20</div>
+      </div>
+    </div>
+
+  </div> -->
+    <!-- <h2>Quiz Board</h2> -->
+    <div class="board">
+      <p>
+        <button class="button" data-modal="modalTwo" id="qb">Quiz Board</button>
+      </p>
+    </div>
+    
     <div id="modalTwo" class="modal">
       <div class="modal-content">
         <div class="contact-form">
           <span class="close">&times;</span>
           <form action="/">
             <h2>Enter Details to Start Quiz</h2>
+            <div class="info_title">
+              <span class="rules">Some Rules of this Quiz</span>
+            </div>
+            <div class="info_list">
+              <div class="info">You will have only 15 secs per each question</div>
+              <div class="info">Once you select your answer, you can't reselect</div>
+              <div class="info">you can't select any option once time goes off.</div>
+              <div class="info">You can't exit from the Quiz while you are playing</div>
+              <div class="info">You will get points on the basis of your correct answers</div>
+            </div>
+            <br>
             <div>
               <input class="fname" type="text" name="name" placeholder="Full name" />
               <input type="text" name="name" placeholder="Email" />
               <br>
-              <label for="quiz">Choose an option:</label>
+               <label for="quiz">Choose an option for Quiz Subject:</label> 
 
-<select name="quiz" id="quiz">
+<!-- <select name="quiz" id="quiz">
   <br><br>
-  <option value="general knowledge">General Knowledge</option>
-  <option value="sports">Sports</option>
+  <option value="modern-art">Mordern-Art</option>
+  <option value="coding">Coding</option>
   <option value="music">Music</option>
-  <option value="films">Films</option>
-  <option value="history">History</option>
-</select>
+  <br>
+</select>  -->
             </div>
-           
-            <button type="submit" href="/">Start Quiz</button>
+           <br>
+           <ul class="op1">
+            <li ><button type="submit" id="submit-button"><a href="modern-art.html">Mordern-Art</a></button></li>
+            <li ><button type="button" id="submit-button"><a href="coding.html">Coding</a></button></li>
+            <li ><button type="button" id="submit-button"><a href="music.html">Music</a></button></li>
+           </ul>
+            
+            
+            
           </form>
         </div>
       </div>
     </div>
-    <script type="module" src="js/index.js"></script>
+     <footer><a href="about.html">About us</a>
+      <br>Created by All Stars Group from @Knowledgehut
+    </footer> 
+    <script type="module" src="index.js"></script>
   </body>
 </html>

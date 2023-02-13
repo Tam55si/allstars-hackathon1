@@ -3,11 +3,85 @@
 * {
   font-family: 'Open Sans', sans-serif;
 }
+/* ------------------------------- */
+.ratingmain {
+  position: fixed;
+  bottom: 0;
+  left: 200px;
+  width: 300px;
+  top: 400px;
+}
 
+
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin: 90px, 10px, 10px, 10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+/* ---------------------------------- */
 html,
 body {
   margin: 0px;
   padding: 0px;
+  background-image: url("background.webp");
+  
 }
 
 #main {
@@ -17,6 +91,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
 p {
@@ -31,10 +106,32 @@ ul {
   background-color: #333;
 }
 
-li {
+ .nav {
   float: left;
+  
 }
+/* .op {
+  display: flex;
 
+} */
+
+ul{
+   position: relative;
+  padding-left:0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  
+}  
+/* a:not([data-attr="img"]) */
+/* li{
+   background-color: white; 
+  border-radius: .3em;
+  width: 30%;
+  flex: 0 0 0;/* added 
+} */
 * {
   box-sizing: border-box;
 }
@@ -58,11 +155,14 @@ li {
 h2,
 p {
   margin: 0 0 20px;
-  font-weight: 400;
-  color: #999;
+  font-weight: 900;
+  color: black;
+
+  
 }
 span {
-  color: #666;
+  color: blue;
+  font-weight: 600;
   display: block;
   padding: 0 0 5px;
 }
@@ -70,27 +170,34 @@ form {
   padding: 25px;
   margin: 25px;
   box-shadow: 0 2px 5px #f5f5f5;
-  background: #eee;
+  background-image: linear-gradient(blueviolet, violet);
 }
-input,
-textarea {
+input {
   width: 90%;
   padding: 10px;
   margin-bottom: 20px;
   border: 1px solid #1c87c9;
   outline: none;
 }
+.board {
+  display: flex;
+  position: ab;
+}
+#qb
+{
+  text-shadow: 2px 2px 5px red;
+}
 .contact-form button {
   width: 100%;
   padding: 10px;
   border: none;
-  background: #1c87c9;
+  background: transparent;
   font-size: 16px;
   font-weight: 400;
   color: #fff;
 }
 button:hover {
-  background: #2371a0;
+  background: black;
 }
 .close {
   color: #aaa;
@@ -105,7 +212,7 @@ button:hover {
   cursor: pointer;
 }
 button.button {
-  background: none;
+  /* background: none;
   border-top: none;
   outline: none;
   border-right: none;
@@ -113,12 +220,27 @@ button.button {
   border-bottom: #02274a 1px solid;
   padding: 0 0 3px 0;
   font-size: 16px;
+  cursor: pointer; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: transparent;
+  font-weight: bolder;
+  color: #111;
+  font-size: 50px;
+  padding: 16px 30px;
+  border: none;
   cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
 }
 button.button:hover {
-  border-bottom: #a99567 1px solid;
-  color: #a99567;
+  /* border-bottom: #a99567 1px solid; */
+  color: blue;
 }
+
 li a {
   display: block;
   color: white;
@@ -147,4 +269,15 @@ code {
   font-size: 1rem;
   background-color: rgb(219, 219, 219);
   padding: 10px;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* top: 0; */
+  width: 100%;
+  background-color: blueviolet;
+  color: white;
+  text-align: center;
 }

@@ -3,7 +3,7 @@
 // If you do not require a simulated backend, you can remove the code shown below.
 if (process.env.NODE_ENV === 'development') {
   const apiStatus = document.querySelector('#api-status');
-  import('../api/browser')
+  import('./api/browser')
     .then(({ worker }) => worker.start())
     .then(() => fetch('/'))
     .then((res) => res.json())
@@ -29,3 +29,28 @@ let modalBtns = [...document.querySelectorAll(".button")];
           event.target.style.display = "none";
         }
       };
+      document.getElementById("start").addEventListener("click", function() {
+        document.querySelector(".welcome").style.display = "none";
+        document.querySelector(".user-details").style.display = "flex";
+      });
+      
+      document.getElementById("submit-button").addEventListener("click", function(event) {
+        event.preventDefault();
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        if (name === "" || email === "") {
+          alert("Please fill in both the name and email fields to.");
+          return;
+        }
+        var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!emailRegex.test(email)) {
+          alert("Please enter a valid email address.");
+          return;
+        }
+      
+        localStorage.setItem("name", name);
+        localStorage.setItem("email", email);
+      
+        window.location.href = "categories.html";
+      });
+      
